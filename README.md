@@ -1,1 +1,19 @@
 # DBMS
+
+*Репозиторий создан для отчетности выполнения домашних заданий на курсе Otus - DBMS*
+
+В данном репозитории по папкам разбиты домашние задания к каждому уроку 
+
+Краткий обзор домашни
+/Homeworks/
+
+* **[Homework I](/Homeworks%20/Homework%20I/README.md)** - *Спроектировать свою первую базу данных на курсе*
+* **[Homework II](Homeworks%20/Homework%20II/README.md)** - *Научиться применять индексы в реальном проекте*
+* **[Homework III](/Homeworks%20/Homework%20III/README.md)** - *Создать кластер PostgreSQL в докере или на виртуальной машине, запустить сервер и подключить клиента*
+* **[Homework IV](/Homeworks%20/Homework%20IV/README.md)** - *Реализовать спроектированную схему в PostgreSQL*
+* **[Homework V](/Homeworks%20/Homework%20V/README.md)** - *DML в PostgreSQL*
+* **[Homework VI](/Homeworks%20/Homework%20VI/README.md)** - *Индексы PostgreSQL*
+* **[Homework VII](/Homeworks%20/Homework%20VII/README.md)** - *Научиться использовать функцию LAG и CTE*
+
+
+*The sequel will be coming soon...*
