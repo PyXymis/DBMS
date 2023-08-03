@@ -25,13 +25,6 @@
 
 [//]: # (# Assessment)
 [//]: # (![image]&#40;https://user-images.githubusercontent.com/37443340/227890091-022abddf-40b5-4b30-9026-981c53cc046d.png&#41;)
-```
-
-pg_ctl -D . -l logfile restart
-pg_basebackup -h localhost -p 5433 -D otus-slave -U replicator --write-recovery-conf --progress --verbose
-![image](https://github.com/PyXymis/DBMS/assets/37443340/9ba62ea3-692a-412c-bc28-a0e8bf407152)
-```
-
 # Solution
 ## Физическая репликация
 - Для выполнения ДЗ нам необходимо создать 2 кластера БД. Удалить содержимое кластера Slave и сделать в него базовый бекап master. 
