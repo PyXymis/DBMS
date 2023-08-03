@@ -20,7 +20,7 @@ CREATE TABLE  IF NOT EXISTS category (
     title VARCHAR(255) NOT NULL,
     updated TIMESTAMP NOT NULL,
     created TIMESTAMP NOT NULL,
-    slug VARCHAR(1023) UNIQUE,
+    slug VARCHAR(500) UNIQUE,
     image VARCHAR(128) UNIQUE,
     description TEXT,
     parent_id INTEGER
@@ -43,6 +43,22 @@ CREATE TABLE  IF NOT EXISTS product (
     FOREIGN KEY (category_id) REFERENCES category(id)
 );
 
+CREATE TABLE  IF NOT EXISTS address (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	profile_id INT,
+	dist VARCHAR(256),
+	street VARCHAR(256),
+	house VARCHAR(32),
+	liter INT,
+	entrance INT,
+	is_doorphone_exist TINYINT(1),
+	not_call_doorphone TINYINT(1),
+	latitude DECIMAL(10, 2),
+	longitude DECIMAL(10, 2),
+	geolocation JSON,
+    FOREIGN KEY (profile_id) REFERENCES profile(id)
+);
+
 CREATE TABLE contract (
     id INT AUTO_INCREMENT PRIMARY KEY,
     extra_code VARCHAR(256),
@@ -59,22 +75,6 @@ CREATE TABLE contract (
     bonuses_used INT,
     bonuses_apply TINYINT(1),
     FOREIGN KEY (address_id) REFERENCES address(id),
-    FOREIGN KEY (profile_id) REFERENCES profile(id)
-);
-
-CREATE TABLE  IF NOT EXISTS address (
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	profile_id INT,
-	dist VARCHAR(256),
-	street VARCHAR(256),
-	house VARCHAR(32),
-	liter INT,
-	entrance INT,
-	is_doorphone_exist TINYINT(1),
-	not_call_doorphone TINYINT(1),
-	latitude DECIMAL(10, 2),
-	longitude DECIMAL(10, 2),
-	geolocation JSON,
     FOREIGN KEY (profile_id) REFERENCES profile(id)
 );
 

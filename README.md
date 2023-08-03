@@ -13,7 +13,10 @@
 * **[Homework IV](/Homeworks%20/Homework%20IV/README.md)** - *Реализовать спроектированную схему в PostgreSQL*
 * **[Homework V](/Homeworks%20/Homework%20V/README.md)** - *DML в PostgreSQL*
 * **[Homework VI](/Homeworks%20/Homework%20VI/README.md)** - *Индексы PostgreSQL*
-* **[Homework VII](/Homeworks%20/Homework%20VII/README.md)** - *Научиться использовать функцию LAG и CTE*
+* **[Homework VII](/Homeworks%20/Homework%20VII/README.md)** - *Агрегация и сортировка, CTE, аналитические функции*
+* **[Homework VIII](/Homeworks%20/Homework%20VIII/README.md)** - *Репликация PostgreSQL*
+* **[Homework IX](/Homeworks%20/Homework%20IX/README.md)** - *Создаем базу данных MySQL в докере*
+* **[Homework X](/Homeworks%20/Homework%20X/README.md)** - *Типы данных в СУБД MySQL*
 
 
 *The sequel will be coming soon...*
