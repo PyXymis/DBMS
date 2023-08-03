@@ -17,6 +17,7 @@
 * **[Homework VIII](/Homeworks%20/Homework%20VIII/README.md)** - *Репликация PostgreSQL*
 * **[Homework IX](/Homeworks%20/Homework%20IX/README.md)** - *Создаем базу данных MySQL в докере*
 * **[Homework X](/Homeworks%20/Homework%20X/README.md)** - *Типы данных в СУБД MySQL*
-
+* **[Homework XI](/Homeworks%20/Homework%20XI/README.md)** - *SQL выборка в MySQL*
+* **[Homework XII](/Homeworks%20/Homework%20XII/README.md)** - *Транзацкции, MVCC, ACID*
 
 *The sequel will be coming soon...*
