@@ -19,5 +19,7 @@
 * **[Homework X](/Homeworks%20/Homework%20X/README.md)** - *Типы данных в СУБД MySQL*
 * **[Homework XI](/Homeworks%20/Homework%20XI/README.md)** - *SQL выборка в MySQL*
 * **[Homework XII](/Homeworks%20/Homework%20XII/README.md)** - *Транзацкции, MVCC, ACID*
+* **[Homework XIII](/Homeworks%20/Homework%20XIII/README.md)** - *DML: агрегация и сортировка*
+* **[Homework XIV](/Homeworks%20/Homework%20XIV/README.md)** - *Индексы в MySQL*
 
 *The sequel will be coming soon...*

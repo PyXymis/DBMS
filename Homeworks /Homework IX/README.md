@@ -73,6 +73,7 @@ CREATE TABLE  IF NOT EXISTS product (
     image VARCHAR(128),
     category_id INT,
     stock INT,
+    price DECIMAL(10, 2),
     FOREIGN KEY (category_id) REFERENCES category(id)
 );
 
