@@ -121,7 +121,7 @@ CREATE TABLE delivery.address (
 	not_call_doorphone BOOLEAN,
 	latitude DECIMAL(2, 10),
 	longitude DECIMAL(2, 10),
-	geolocation JSON
+	geolocation INTEGER PRIMARY KEY
 ) TABLESPACE delivery_tablespace;
 -- Таблица для сбора метрик
 CREATE TABLE metrics.metrics (

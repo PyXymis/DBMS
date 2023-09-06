@@ -21,5 +21,7 @@
 * **[Homework XII](/Homeworks%20/Homework%20XII/README.md)** - *Транзацкции, MVCC, ACID*
 * **[Homework XIII](/Homeworks%20/Homework%20XIII/README.md)** - *DML: агрегация и сортировка*
 * **[Homework XIV](/Homeworks%20/Homework%20XIV/README.md)** - *Индексы в MySQL*
+* **[Homework XV](/Homeworks%20/Homework%20XV/README.md)** - *Хранимые процедуры и триггеры*
+* **[Homework XVI](/Homeworks%20/Homework%20XVI/README.md)** - *Оптимизация производительности. Профилирование. Мониторинг*
 
 *The sequel will be coming soon...*
