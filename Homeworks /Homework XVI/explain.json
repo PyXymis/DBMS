@@ -1,0 +1,71 @@
+{
+  "query_block": {
+    "select_id": 1,
+    "cost": 0.01639696,
+    "filesort": {
+      "sort_key": "sum(cp.price * cp.quantity) desc",
+      "temporary_table": {
+        "nested_loop": [
+          {
+            "table": {
+              "table_name": "cp",
+              "access_type": "ALL",
+              "possible_keys": [
+                "contract_id",
+                "product_id"
+              ],
+              "loops": 1,
+              "rows": 2,
+              "cost": 0.0111808,
+              "filtered": 100,
+              "attached_condition": "cp.contract_id is not null and cp.product_id is not null"
+            }
+          },
+          {
+            "table": {
+              "table_name": "c",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "key_length": "4",
+              "used_key_parts": [
+                "id"
+              ],
+              "ref": [
+                "delivery.cp.contract_id"
+              ],
+              "loops": 2,
+              "rows": 1,
+              "cost": 0.00260808,
+              "filtered": 100,
+              "attached_condition": "c.created between <cache>('2000-01-01') and <cache>('2100-01-01')"
+            }
+          },
+          {
+            "table": {
+              "table_name": "p",
+              "access_type": "eq_ref",
+              "possible_keys": [
+                "PRIMARY"
+              ],
+              "key": "PRIMARY",
+              "key_length": "4",
+              "used_key_parts": [
+                "id"
+              ],
+              "ref": [
+                "delivery.cp.product_id"
+              ],
+              "loops": 2,
+              "rows": 1,
+              "cost": 0.00260808,
+              "filtered": 100
+            }
+          }
+        ]
+      }
+    }
+  }
+}
