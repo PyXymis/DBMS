@@ -23,3 +23,18 @@
 [//]: # (# Assessment)
 [//]: # (![image]&#40;https://user-images.githubusercontent.com/37443340/227890091-022abddf-40b5-4b30-9026-981c53cc046d.png&#41;)
 # Solution
+1. Для начала нам необходимо дешифровать и распаковать дамп:
+    ```bash
+    openssl des3 -d -salt -k "password" -in backup_des.xbstream.gz.des3 | gzip -d > backup.xbstream
+    ```
+2. После распаковки необходимо восстановить бекап:
+    ```bash
+    xbstream -x < backup.xbstream -C restore
+    ```
+3. Т.к. бекап был выполнен в режиме **'--backup'**, необходимо его подготовить:
+    ```bash
+    xtrabackup --prepare --target-dir=restore 
+    ```
+   * Результат [xtrabackup.log](/Homeworkds%20/Homework%20XVII/xtrabackup.log)
+4. 
+   
