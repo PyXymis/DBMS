@@ -35,6 +35,39 @@
     ```bash
     xtrabackup --prepare --target-dir=restore 
     ```
-   * Результат [xtrabackup.log](/Homeworkds%20/Homework%20XVII/xtrabackup.log)
-4. 
-   
+   * Результат [xtrabackup.log](/Homeworks%20/Homework%20XVII/xtrabackup.log)
+4. Далее мы переносим дамп структуры **world_db.sql** в новосозданную базу **world**
+    ```bash
+     mysql -uroot -p world < world_db.sql
+    ```
+5. И копируем файл **city.idb** из бекапа в директорию MySQL:
+    ```bash
+   cp recovery/world/city.idb /var/lib/mysql/world
+    ```
+6. В MySQL перед копированием нам необходимо отключить табличное пространство, после копирования включить его снова и выполнить flush
+    ```sql
+    mysql> ALTER TABLE city DISCARD TABLESPACE;
+    Query OK, 0 rows affected (0.03 sec)
+    mysql> ALTER TABLE city IMPORT TABLESPACE;
+    Query OK, 0 rows affected (0.02 sec)
+    mysql> flush tables;
+    Query OK, 0 rows affected (0.01 sec)
+    ```
+7. Посмотрим на результаты **SELECT**:
+    ```sql
+    mysql> select count(*) from city where countrycode = 'RUS';
+    +----------+
+    | count(*) |
+    +----------+
+    |      189 |
+    +----------+
+    1 row in set (0.00 sec)
+    
+    mysql> select count(*) from city;
+    +----------+
+    | count(*) |
+    +----------+
+    |     4079 |
+    +----------+
+    1 row in set (0.00 sec)
+    ```
