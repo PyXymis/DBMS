@@ -55,9 +55,11 @@ _Задание со *_
      * Streets и Houses: Один ко многим (одна улица может иметь много домов)
      * Houses и Addresses: Один ко многим (один дом может иметь много адресов)
 * Изначальная структура БД:
-![image](https://github.com/PyXymis/DBMS/assets/37443340/57d28d8e-a25f-407a-9f8b-80a6f92653b5)
+
+  ![image](https://github.com/PyXymis/DBMS/assets/37443340/57d28d8e-a25f-407a-9f8b-80a6f92653b5)
 * Декомпозированная и нормализированная структура БД: (_Для визуалиации использовался **dbdiagram.io**_)
-![image](https://github.com/PyXymis/DBMS/assets/37443340/9ae6c543-d5c1-4acb-b250-7ea0a2b70c61)
+  
+  ![image](https://github.com/PyXymis/DBMS/assets/37443340/9ae6c543-d5c1-4acb-b250-7ea0a2b70c61)
 2. Для наполнения данными БД мы создадим временную таблицу с структурой изначальной БД, загрузим в нее CSV файл и уже оттуда будем вставлять данные в декомпозированные таблицы:
     ```sql
     CREATE TEMPORARY TABLE TempImport (
